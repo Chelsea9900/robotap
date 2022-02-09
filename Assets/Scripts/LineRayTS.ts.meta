@@ -1,0 +1,48 @@
+fileFormatVersion: 2
+guid: 955ed95d35dd3451c8b532c8566490b9
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nrequire(\\\"UnityEngine.EventSystems\\\");\\r\\nclass
+    LineRayTS extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    static GetInstance()
+    {\\r\\n        if (!LineRayTS.Instance) {\\r\\n            var _obj = new UnityEngine_1.GameObject(`LineRayTS`);\\r\\n           
+    UnityEngine_1.GameObject.DontDestroyOnLoad(_obj);\\r\\n            LineRayTS.Instance
+    = _obj.AddComponent($typeof(LineRayTS));\\r\\n        }\\r\\n        return LineRayTS.Instance;\\r\\n   
+    }\\r\\n    Awake() {\\r\\n        LineRayTS.Instance = this;\\r\\n    }\\r\\n   
+    Start() {\\r\\n    }\\r\\n    /**\\r\\n        \uBC29\uBC95 1 \uC744 \uD65C\uC6A9\uD574\uC11C
+    \uC810\uC218 \uD310\uB2E8\uC744 \uD558\uB294 \uD568\uC218 JudgeScore() \uC785\uB2C8\uB2E4.\\r\\n\\n       
+    * \uBC29\uBC95 1. \uD654\uBA74\uC758 \uC544\uBB34 \uACF3\uC744 \uD130\uCE58\uD558\uBA74
+    SpriteRedLine (\uBE68\uAC04 \uB9C9\uB300) \uC5D0\uC11C Ray \uB97C \uC3D8\uACE0,\\r\\n       
+    hitInfo \uC5D0\uC11C Quad\uC758 \uC815\uBCF4\uB97C \uC5BB\uC5B4\uC635\uB2C8\uB2E4.
+    Ray\uB97C \uC3D8\uB294 GameObject (LineRayTS \uC2A4\uD06C\uB9BD\uD2B8\uC758 \uC8FC\uC778)
+    \uB294 'spriteRedLine' \uC785\uB2C8\uB2E4.\\r\\n    */\\r\\n    JudgeScore()
+    {\\r\\n        // Debug.DrawRay(this.transform.position, Vector3.forward, Color.red);\\r\\n       
+    let hitInfo = $ref();\\r\\n        if (UnityEngine_1.Physics.Raycast(this.transform.position,
+    this.transform.forward, hitInfo)) {\\r\\n            // console.log(`JudgeScore()
+    is called to cast Ray.`);\\r\\n            let myhitInfo = $unref(hitInfo);\\r\\n           
+    let selectedQuad = myhitInfo.transform.name;\\r\\n            // console.log(`Ray
+    at : ${selectedQuad}`); \\r\\n            return selectedQuad;\\r\\n           
+    /*\\r\\n                \uC544\uB798 3\uAC1C\uB294 \uBAA8\uB450 \uB611\uAC19\uC2B5\uB2C8\uB2E4.\\r\\n               
+    console.log(`sprite: ${myhitInfo.collider.name}`);\\r\\n                console.log(`sprite:
+    ${myhitInfo.transform.name}`);\\r\\n                console.log(`sprite: ${myhitInfo.collider.gameObject.name}`);\\r\\n           
+    */\\r\\n        }\\r\\n        else {\\r\\n            console.log(`Nothing is
+    detected.`);\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default = LineRayTS;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGluZVJheVRTLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiTGluZVJheVRTLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDZDQUFxTTtBQUVyTSxvQ0FBa0M7QUFLbEMsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUlqRCxNQUFNLENBQUMsV0FBVztRQUNyQixJQUFHLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBQztZQUNuQixJQUFJLElBQUksR0FBRyxJQUFJLHdCQUFVLENBQUMsV0FBVyxDQUFDLENBQUM7WUFDdkMsd0JBQVUsQ0FBQyxpQkFBaUIsQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUNuQyxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQyxZQUFZLFNBQUMsU0FBUyxFQUFHLENBQUM7U0FDdkQ7UUFDRCxPQUFPLFNBQVMsQ0FBQyxRQUFRLENBQUM7SUFDOUIsQ0FBQztJQUNELEtBQUs7UUFDRCxTQUFTLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztJQUM5QixDQUFDO0lBRUQsS0FBSztJQUNMLENBQUM7SUFFRDs7Ozs7TUFLRTtJQUNLLFVBQVU7UUFDYixzRUFBc0U7UUFDdEUsSUFBSSxPQUFPLEdBQUcsSUFBSSxFQUFjLENBQUM7UUFFakMsSUFBRyxxQkFBTyxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsU0FBUyxDQUFDLE9BQU8sRUFBRSxPQUFPLENBQUMsRUFBQztZQUN6RSxzREFBc0Q7WUFDdEQsSUFBSSxTQUFTLEdBQUcsTUFBTSxDQUFDLE9BQU8sQ0FBQyxDQUFDO1lBQ2hDLElBQUksWUFBWSxHQUFZLFNBQVMsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDO1lBRXJELDRDQUE0QztZQUM1QyxPQUFPLFlBQVksQ0FBQztZQUVwQjs7Ozs7Y0FLRTtTQUVMO2FBQUk7WUFDRCxPQUFPLENBQUMsR0FBRyxDQUFDLHNCQUFzQixDQUFDLENBQUM7U0FDdkM7SUFFTCxDQUFDO0NBSUo7QUFwREQsNEJBb0RDIn0=\",\"assetPath\":\"Assets/Scripts/LineRayTS.ts\",\"manifest\":{\"properties\":[],\"name\":\"LineRayTS\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 6f99c760a65d732a4f6daff260581911

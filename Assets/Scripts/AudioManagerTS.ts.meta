@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: fb1966e3c26c3419e8b5e43b8a36ee11
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nclass AudioManagerTS extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    static GetInstance() {\\r\\n       
+    if (!AudioManagerTS.Instance) {\\r\\n            var _obj = new UnityEngine_1.GameObject(`CustomSingleton`);\\r\\n           
+    UnityEngine_1.GameObject.DontDestroyOnLoad(_obj);\\r\\n            AudioManagerTS.Instance
+    = _obj.AddComponent($typeof(AudioManagerTS));\\r\\n        }\\r\\n        return
+    AudioManagerTS.Instance;\\r\\n    }\\r\\n    Awake() {\\r\\n        AudioManagerTS.Instance
+    = this;\\r\\n    }\\r\\n    Start() {\\r\\n        this.audioSource = this.gameObject.AddComponent($typeof(UnityEngine_1.AudioSource));\\r\\n   
+    }\\r\\n    /** \uCF54\uC778\uC744 \uBA39\uC5C8\uC744 \uB54C \uB098\uB294 \uD6A8\uACFC\uC74C
+    */\\r\\n    audioGetCoin() {\\r\\n        this.audioSource.clip = this.audioClipGetCoin;\\r\\n       
+    this.audioSource.loop = false;\\r\\n        this.audioSource.Play();\\r\\n       
+    console.log(`AudioManagerTS-auduioGetCoin() is played`);\\r\\n    }\\r\\n}\\r\\nexports.default
+    = AudioManagerTS;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQXVkaW9NYW5hZ2VyVFMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJBdWRpb01hbmFnZXJUUy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCw2Q0FBZ0U7QUFFaEUsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQUl0RCxNQUFNLENBQUMsV0FBVztRQUNyQixJQUFHLENBQUMsY0FBYyxDQUFDLFFBQVEsRUFBQztZQUN4QixJQUFJLElBQUksR0FBRyxJQUFJLHdCQUFVLENBQUMsaUJBQWlCLENBQUMsQ0FBQztZQUM3Qyx3QkFBVSxDQUFDLGlCQUFpQixDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ25DLGNBQWMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFlBQVksU0FBQyxjQUFjLEVBQUcsQ0FBQztTQUNqRTtRQUNELE9BQU8sY0FBYyxDQUFDLFFBQVEsQ0FBQztJQUNuQyxDQUFDO0lBQ0QsS0FBSztRQUNELGNBQWMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO0lBQ25DLENBQUM7SUFPRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyx5QkFBVyxFQUFHLENBQUM7SUFDbkUsQ0FBQztJQUVELHVCQUF1QjtJQUNoQixZQUFZO1FBQ2YsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLGdCQUFnQixDQUFDO1FBQzlDLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxHQUFHLEtBQUssQ0FBQztRQUM5QixJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksRUFBRSxDQUFDO1FBQ3hCLE9BQU8sQ0FBQyxHQUFHLENBQUMsMENBQTBDLENBQUMsQ0FBQztJQUM1RCxDQUFDO0NBRUo7QUFqQ0QsaUNBaUNDIn0=\",\"assetPath\":\"Assets/Scripts/AudioManagerTS.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"audioClipGetCoin\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"AudioManagerTS\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: e19ab970885acfe8561e87b7236c4845

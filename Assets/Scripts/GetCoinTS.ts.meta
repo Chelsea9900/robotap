@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 4745051c64eb54792841f1989d801310
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst AudioManagerTS_1
+    = require(\\\"./AudioManagerTS\\\");\\r\\nclass GetCoinTS extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n    }\\r\\n    OnTriggerEnter(t) {\\r\\n        console.log(`CharacterControllerTS-OnTriggerEnter-BEFORE`);\\r\\n       
+    if (t.gameObject.tag == \\\"Coin\\\") { //\uD0DC\uADF8\uB85C \uAD6C\uBCC4\\r\\n           
+    UnityEngine_1.Object.Destroy(t.gameObject);\\r\\n            AudioManagerTS_1.default.Instance.audioGetCoin();\\r\\n       
+    }\\r\\n        else if (t.gameObject.name.includes(`Coin`)) { //\uC774\uB984\uC73C\uB85C
+    \uAD6C\uBCC4\\r\\n            UnityEngine_1.Object.Destroy(t.gameObject);\\r\\n           
+    AudioManagerTS_1.default.Instance.audioGetCoin();\\r\\n            // this.GameOver();\\r\\n       
+    }\\r\\n        console.log(`CharacterControllerTS-OnTriggerEnter-AFTER-${t.name}`);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = GetCoinTS;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2V0Q29pblRTLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR2V0Q29pblRTLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQStDO0FBQy9DLGlEQUFxRDtBQUNyRCxxREFBOEM7QUFDOUMsTUFBcUIsU0FBVSxTQUFRLHFDQUFxQjtJQUV4RCxLQUFLO0lBRUwsQ0FBQztJQUVELGNBQWMsQ0FBQyxDQUFXO1FBQ3RCLE9BQU8sQ0FBQyxHQUFHLENBQUMsNkNBQTZDLENBQUMsQ0FBQztRQUUzRCxJQUFHLENBQUMsQ0FBQyxVQUFVLENBQUMsR0FBRyxJQUFJLE1BQU0sRUFBQyxFQUFFLFFBQVE7WUFDcEMsb0JBQU0sQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxDQUFDO1lBQzdCLHdCQUFjLENBQUMsUUFBUSxDQUFDLFlBQVksRUFBRSxDQUFDO1NBQzFDO2FBQUssSUFBRyxDQUFDLENBQUMsVUFBVSxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsTUFBTSxDQUFDLEVBQUMsRUFBRSxTQUFTO1lBQ25ELG9CQUFNLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsQ0FBQztZQUM3Qix3QkFBYyxDQUFDLFFBQVEsQ0FBQyxZQUFZLEVBQUUsQ0FBQztZQUN2QyxtQkFBbUI7U0FDdEI7UUFFRCxPQUFPLENBQUMsR0FBRyxDQUFDLDhDQUE4QyxDQUFDLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQztJQUd4RSxDQUFDO0NBRUo7QUF2QkQsNEJBdUJDIn0=\",\"assetPath\":\"Assets/Scripts/GetCoinTS.ts\",\"manifest\":{\"properties\":[],\"name\":\"GetCoinTS\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: b3ad2c61b2539ba42ff4773e35aa732c

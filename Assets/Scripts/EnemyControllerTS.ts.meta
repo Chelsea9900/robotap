@@ -1,0 +1,63 @@
+fileFormatVersion: 2
+guid: 96b97be646a934e32815c0f6d73edcd8
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass EnemyControllerTS
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor() {\\r\\n       
+    super(...arguments);\\r\\n        this.m_Time = 0;\\r\\n    }\\r\\n    Start()
+    {\\r\\n        this.gameObject.GetComponent($typeof(UnityEngine_1.MeshRenderer)).material.color
+    = UnityEngine_1.Color.green;\\r\\n        console.log(`\uB9E4\uD130\uB9AC\uC5BC
+    \uD770\uC0C9\uC5D0\uC11C \uCD08\uB85D\uC73C\uB85C \uBCC0\uACBD`);\\r\\n       
+    this.StartCoroutine(this.SomeCoroutine());\\r\\n        // this.StartCoroutine(this.TimeCoroutine());\\r\\n   
+    }\\r\\n    *SomeCoroutine() {\\r\\n        yield new UnityEngine_1.WaitForSeconds(5);\\r\\n       
+    // console.log(`\uC2DC\uC791\uD558\uACE0 5\uCD08\uAC00 \uC9C0\uB0AC\uC74C`);\\r\\n       
+    // transform.rotation\uC740 \uC6D4\uB4DC \uAE30\uC900\uC73C\uB85C \uD68C\uC804\uC744
+    \uD558\uACE0, \\r\\n        // transform.rotate()\uC740 \uB85C\uCEEC(\uC624\uBE0C\uC81D\uD2B8)
+    \uAE30\uC900\uC73C\uB85C \uD68C\uC804\uD569\uB2C8\uB2E4. \\r\\n        this.transform.Rotate(new
+    UnityEngine_1.Vector3(0, 1, 0));\\r\\n        this.transform.Rotate(0, 150, 0);\\r\\n       
+    console.log(`150\uB3C4 \uD68C\uC804\uD568`);\\r\\n        // this.transform.Rotate(Vector3.up
+    * 30);\\r\\n        // this.transform.Rotate(0, 180*Time.deltaTime, 0); // \uCC9C\uCC9C\uD788
+    \uD68C\uC804\uC2DC\uD0A4\uACE0 \uC2F6\uC5C8\uB294\uB370 \uC65C \uC548\uB418\uC9D5..\\r\\n       
+    // this.transform.rotation = Quaternion.Lerp(this.transform.rotation, Quaternion.LookRotation(Vector3.forward),
+    Time.deltaTime * 10);\\r\\n        // this.transform.rotation = Quaternion.Slerp(this.transform.rotation,
+    180)\\r\\n        this.gameObject.GetComponent($typeof(UnityEngine_1.MeshRenderer)).material.color
+    = UnityEngine_1.Color.red;\\r\\n        console.log(`\uB9E4\uD130\uB9AC\uC5BC
+    \uBE68\uAC04\uC0C9\uC73C\uB85C \uBCC0\uACBD`);\\r\\n        console.log(`\uB79C\uB364
+    \uC22B\uC790 : ${this.RandomNum()}`);\\r\\n        // yield this.StartCoroutine(this.TimeCoroutine());\\r\\n   
+    }\\r\\n    /**\\r\\n        1~4 \uC758 \uC815\uC218\uB97C \uB79C\uB364\uD558\uAC8C
+    \uBF51\uC544\uC8FC\uB294 \uD568\uC218.\\r\\n        (\uC6A9\uB3C4 1: \uBA87 \uCD08
+    \uB3D9\uC548 \uAC80\uC0AC \uC548\uD560\uAC74\uC9C0?,\\r\\n        \uC6A9\uB3C4
+    2: \uBA87 \uCD08 \uB3D9\uC548 \uAC80\uC0AC\uD560\uAC74\uC9C0?)\\r\\n    */\\r\\n   
+    RandomNum() {\\r\\n        return this.RandomCount = Math.floor(UnityEngine_1.Random.Range(1,
+    5));\\r\\n    }\\r\\n    /**\\r\\n        \uC2DC\uC791\uD558\uACE0 \uBA87 \uCD08\uAC00
+    \uD758\uB800\uB294\uC9C0 \uC54C \uC218 \uC788\uB294 \uCF54\uB8E8\uD2F4.\\r\\n   
+    */\\r\\n    *TimeCoroutine() {\\r\\n        while (true) {\\r\\n            yield
+    new UnityEngine_1.WaitForSeconds(1);\\r\\n            this.m_Time++;\\r\\n           
+    console.log(`this.m_Time : ${this.m_Time}`);\\r\\n        }\\r\\n    }\\r\\n   
+    Update() {\\r\\n        // this.new_p = Vector3.Lerp(this.transform.position,
+    Vector3.op_Subtraction())\\r\\n    }\\r\\n    *SecondCoroutine() {\\r\\n       
+    while (true) {\\r\\n            yield this.StartCoroutine(this.TimeCoroutine);\\r\\n           
+    this.m_Time++;\\r\\n            console.log(`${this.m_Time}`);\\r\\n        }\\r\\n   
+    }\\r\\n    CheckPlayerDistance() {\\r\\n        let d = UnityEngine_1.Vector3.Distance(this.transform.position,
+    this.zepeto.position);\\r\\n        if (d > 5) {\\r\\n        }\\r\\n       
+    else {\\r\\n            //\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default
+    = EnemyControllerTS;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW5lbXlDb250cm9sbGVyVFMuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFbmVteUNvbnRyb2xsZXJUUy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUEwSDtBQUMxSCxpREFBcUQ7QUFFckQsTUFBcUIsaUJBQWtCLFNBQVEscUNBQXFCO0lBQXBFOztRQUk0QixXQUFNLEdBQVcsQ0FBQyxDQUFDO0lBbUYvQyxDQUFDO0lBL0VHLEtBQUs7UUFFRCxJQUFJLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQywwQkFBWSxHQUFJLFFBQVEsQ0FBQyxLQUFLLEdBQUcsbUJBQUssQ0FBQyxLQUFLLENBQUM7UUFDMUUsT0FBTyxDQUFDLEdBQUcsQ0FBQyxtQkFBbUIsQ0FBQyxDQUFDO1FBRWpDLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLGFBQWEsRUFBRSxDQUFDLENBQUM7UUFDMUMsNkNBQTZDO0lBQ2pELENBQUM7SUFFRCxDQUFFLGFBQWE7UUFDWCxNQUFNLElBQUksNEJBQWMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUM1QiwrQkFBK0I7UUFFL0IsdUNBQXVDO1FBQ3ZDLDRDQUE0QztRQUU1QyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sQ0FBQyxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFDLENBQUMsRUFBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBRTFDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxDQUFDLENBQUMsRUFBRSxHQUFHLEVBQUUsQ0FBQyxDQUFDLENBQUM7UUFDakMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxVQUFVLENBQUMsQ0FBQztRQUV4QiwwQ0FBMEM7UUFDMUMsNkVBQTZFO1FBQzdFLHFJQUFxSTtRQUNySSwyRUFBMkU7UUFFM0UsSUFBSSxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsMEJBQVksR0FBSSxRQUFRLENBQUMsS0FBSyxHQUFHLG1CQUFLLENBQUMsR0FBRyxDQUFDO1FBQ3hFLE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxDQUFDLENBQUM7UUFFN0IsT0FBTyxDQUFDLEdBQUcsQ0FBQyxXQUFXLElBQUksQ0FBQyxTQUFTLEVBQUUsRUFBRSxDQUFDLENBQUM7UUFFM0MsbURBQW1EO0lBQ3ZELENBQUM7SUFFRDs7OztNQUlFO0lBQ0ssU0FBUztRQUNaLE9BQU8sSUFBSSxDQUFDLFdBQVcsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLG9CQUFNLENBQUMsS0FBSyxDQUFDLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQyxDQUFDO0lBQzdELENBQUM7SUFFRDs7TUFFRTtJQUNGLENBQUUsYUFBYTtRQUNYLE9BQU0sSUFBSSxFQUFDO1lBQ1AsTUFBTSxJQUFJLDRCQUFjLENBQUMsQ0FBQyxDQUFDLENBQUM7WUFDNUIsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDO1lBQ2QsT0FBTyxDQUFDLEdBQUcsQ0FBQyxpQkFBaUIsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDLENBQUM7U0FDL0M7SUFDTCxDQUFDO0lBRUQsTUFBTTtRQUNGLCtFQUErRTtJQUNuRixDQUFDO0lBRUQsQ0FBQyxlQUFlO1FBQ1osT0FBTSxJQUFJLEVBQUM7WUFDUCxNQUFNLElBQUksQ0FBQyxjQUFjLENBQUMsSUFBSSxDQUFDLGFBQWEsQ0FBQyxDQUFDO1lBQzlDLElBQUksQ0FBQyxNQUFNLEVBQUUsQ0FBQztZQUNkLE9BQU8sQ0FBQyxHQUFHLENBQUMsR0FBRyxJQUFJLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQztTQUNqQztJQUNMLENBQUM7SUFFRCxtQkFBbUI7UUFDZixJQUFJLENBQUMsR0FBRyxxQkFBTyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsRUFBRSxJQUFJLENBQUMsTUFBTSxDQUFDLFFBQVEsQ0FBQyxDQUFDO1FBQ3hFLElBQUcsQ0FBQyxHQUFDLENBQUMsRUFBQztTQUVOO2FBQUk7WUFDRCxFQUFFO1NBQ0w7SUFDTCxDQUFDO0NBTUo7QUF2RkQsb0NBdUZDIn0=\",\"assetPath\":\"Assets/Scripts/EnemyControllerTS.ts\",\"manifest\":{\"properties\":[],\"name\":\"EnemyControllerTS\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: b49e93cb1184a8c5d7e2e987caf95550

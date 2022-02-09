@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 57046bc9fe8e34c8cb0309fb30317962
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass SelfDestroyTS extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start() {\r\n        UnityEngine_1.GameObject.Destroy(this.transform);\r\n       
+    UnityEngine_1.Vector3.Slerp;\r\n    }\r\n}\r\nexports.default = SelfDestroyTS;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2VsZkRlc3Ryb3lUUy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNlbGZEZXN0cm95VFMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBaUQ7QUFDakQsaURBQXFEO0FBRXJELE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFFNUQsS0FBSztRQUNELHdCQUFVLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztRQUNuQyxxQkFBTyxDQUFDLEtBQUssQ0FBQTtJQUNqQixDQUFDO0NBRUo7QUFQRCxnQ0FPQyJ9","assetPath":"Assets/Scripts/SelfDestroyTS.ts","manifest":{"properties":[],"name":"SelfDestroyTS","description":""},"isCompiled":true}'
+  typescriptHash: 519a9c9a5b0bcf2d1e7aad4174ebf7a1
